@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Chuong Trinh Kiem Tra Mat Khau</h2>
+    <label>Nhập mật khẩu:</label>
+    <input type="password" id="pass">
+    <br><br>
+    <button onclick="ktra()">Kiểm tra</button>
+    <p id="ketqua"></p>
+
+    <script>
+        function ktra() {
+            let p = document.getElementById("pass").value;
+            let kq = (p.length >= 8) ? "Mật khẩu hợp lệ" : "Mật khẩu quá ngắn";
+            document.getElementById("ketqua").innerHTML = kq;
+        }
+    </script>
+</body>
+</html>

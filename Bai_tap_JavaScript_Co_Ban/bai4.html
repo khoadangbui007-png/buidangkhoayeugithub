@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2> Xem boi tinh yeu</h2>
+    <label for="">Nhap vao ten cua ban</label>
+    <input type="text" id="tenban">
+    <br>
+    <label for="">Nhap vao ten cua nguoi yeu</label>
+    <input type="text" id="tennguoiyeu">
+    <br><br>
+    <button onclick="tinhyeu()">Xem boi tinh yeu</button>
+    <h3 id="ketqua"></h3>
+
+    <script>
+        function tinhyeu() {
+             let tenBan = document.getElementById("tenban").value;
+        let tenNguoiYeu = document.getElementById("tennguoiyeu").value;
+        let diem = Math.floor(Math.random() * 100) + 1;
+        if(diem > 50)
+            document.getElementById("ketqua").innerHTML = 
+            tenBan + "và" + tenNguoiYeu + "diem: " + diem + "% yeu nhau";
+        else
+            document.getElementById("ketqua").innerHTML = 
+            tenBan + "và" + tenNguoiYeu + "diem: " + diem + "% khong yeu nhau";     
+       
+        
+        }
+    </script>
+</body>
+</html>
